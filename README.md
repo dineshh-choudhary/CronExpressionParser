@@ -49,7 +49,7 @@ To use the Cron Expression Parser, follow these steps:
 
 4. Run the program using the following command:
    ```
-   java CronExpressionParserMain */15 0,23 1-5,30-10 7 1-7 /usr/bin/find
+   java CronExpressionParserMain */15 0,23 1-5 7 1,7 /usr/bin/find
    ```
    or
    ```
@@ -64,17 +64,17 @@ To use the Cron Expression Parser, follow these steps:
 Here's an example of how the Cron Expression Parser can be used:
 
 ```
-java CronExpressionParserMain */15 0,23 1-5,30-10 7 1-7 /usr/bin/find
+java CronExpressionParserMain */15 0,23 1-5 7 1,7 /usr/bin/find
 ```
 
 Output:
 ```
-minute         0 15 30 45
-hour           0 23
-day of month   1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
-month          1 2 3 4 5 6 7 8 9 10 11 12
-day of week    7
-command        /usr/bin/find
+minute        [0, 15, 30, 45]
+hour          [0, 23]
+day of month  [1, 2, 3, 4, 5]
+month         [7]
+day of week   [1, 7]
+command       /usr/bin/find
 ```
 
 ## Troubleshooting

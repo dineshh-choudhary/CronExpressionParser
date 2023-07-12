@@ -10,7 +10,7 @@ public class CronExpressionParserMain {
             cronString = scanner.nextLine();
         }
 
-//        cronString = "*/15 0,23 1-5,30-10 7 1-7 /usr/bin/find";
+//        cronString = "*/15 0,23 1-5 7 1,7 /usr/bin/find";
         try {
             CronExpressionParser cronExpressionParser = new CronExpressionParser();
             List<String> expandedFields = cronExpressionParser.parseCronString(cronString);
